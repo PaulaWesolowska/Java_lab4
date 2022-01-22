@@ -27,5 +27,47 @@ public class Main {
         b) wykorzystać wszystkie metody do implementacji pól
         c) wyświetlić w konsoli metodę toString (na obu objektach) opisującą zachowanie klasy Dom
         */
+
+        Dom dom = new Dom();
+        Budynek budynek = new Dom() {
+
+            @Override
+            public double powierzchnia(double pow) {
+                return pow;
+            }
+
+            @Override
+            public String adresBudynku(String adres) {
+                return adres;
+            }
+
+            @Override
+            public int liczbaOkien(int okna) {
+                return okna;
+            }
+
+            @Override
+            public void liczbaMieszkancow(int mieszkancy) {
+                System.out.println("Liczba mieszkańców: " + mieszkancy);
+            }
+
+            @Override
+            public void kolorDomu(KolorEnum kolor) {
+                System.out.println(kolor);
+            }
+
+            @Override
+            public void getWlasciciel(String imie, String nazwisko) {
+                this.imie = imie;
+                this.nazwisko = nazwisko;
+            }
+        };
+
+        System.out.println("Metoda Budynek.ToString: ");
+        System.out.println(budynek.toString());
+        System.out.println("\n");
+        System.out.println("Metoda Dom.ToString: ");
+        System.out.println(dom.toString());
+
     }
 }
