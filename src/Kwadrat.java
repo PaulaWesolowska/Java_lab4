@@ -1,12 +1,17 @@
 public class Kwadrat extends Figura {
 
+    double bok1;
+
+    Kwadrat (double bok1){
+        this.bok1 = bok1;
+    }
     @Override
-    double pole(double bok1, double bok2) {
-        return bok1 * bok2;
+    public double pole() {
+        return (bok1 * bok1);
     }
 
     @Override
-    double obwod(double bok1, double bok2) {
-        return 2* bok1 + 2* bok2;
+    public double obwod() {
+        return 4 * bok1;
     }
 }
